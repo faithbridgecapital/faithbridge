@@ -494,6 +494,7 @@
     backdrop-filter: blur(22px) saturate(150%);
     -webkit-backdrop-filter: blur(22px) saturate(150%);
     border: 1px solid rgba(244,239,230,0.14);
+    padding: 32px 28px;
     box-shadow:
       0 1px 0 rgba(255,255,255,0.08) inset,
       0 24px 60px rgba(8,25,21,0.35);
@@ -505,10 +506,36 @@
       0 1px 0 rgba(255,255,255,0.1) inset,
       0 32px 70px rgba(8,25,21,0.45);
   }
-  .dream .glass-card .num { color: var(--brass); }
-  .dream .glass-card h3 { color: var(--cream); }
+  .dream .glass-card .num { color: var(--brass); margin-bottom: 18px; }
+  .dream .glass-card h3 { color: var(--cream); font-size: 24px; margin-bottom: 18px; line-height: 1.18; }
   .dream .glass-card h3 em { color: var(--brass-soft); }
   .dream .glass-card p { color: rgba(244,239,230,0.78); }
+
+  /* Compact bullet list inside dream cards */
+  .dream-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .dream-bullets li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(244,239,230,0.82);
+  }
+  .dream-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 10px;
+    height: 1px;
+    background: var(--brass);
+  }
   .dream-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1648,10 +1675,10 @@
       <div class="eyebrow center">The Dream Outcome</div>
       <h2>Imagine a Tuesday<br/>where you <em>don't have to be there.</em></h2>
       <p>
-        The pager doesn't go off. The market doesn't dictate your morning. Three
-        hundred families across the country are paying down a mortgage in your
-        name — and you are at your daughter's recital. This is what real assets
-        feel like.
+        The cellphone doesn't go off. Your job doesn't dictate your morning.
+        Three hundred families across the country are paying rents in your name
+        — and you are at your daughter's recital. This is what real assets feel
+        like.
       </p>
     </div>
 
@@ -1659,64 +1686,61 @@
       <div class="glass-card reveal">
         <span class="num">I.</span>
         <h3>Sleep through your <em>best month</em>.</h3>
-        <p>
-          While you rested last night, doors were rented, leases were renewed,
-          and rent was deposited. Your most productive hours are the ones you spent
-          unconscious. Multifamily is the only asset class that pays you for
-          existing.
-        </p>
+        <ul class="dream-bullets">
+          <li>Rent collected while you rest.</li>
+          <li>Leases renewed without a phone call.</li>
+          <li>The only asset class that pays you for existing.</li>
+        </ul>
       </div>
 
       <div class="glass-card reveal">
         <span class="num">II.</span>
         <h3>Trade hours for <em>ownership</em>.</h3>
-        <p>
-          An apartment building earns by the calendar. Each unit is a small business;
-          each tenant is an employee paying you to stay. The compounding doesn't
-          ask permission — and it never tires.
-        </p>
+        <ul class="dream-bullets">
+          <li>Earnings on the calendar, not the case load.</li>
+          <li>Each unit a small business paying you rent.</li>
+          <li>Compounding that never sleeps and never tires.</li>
+        </ul>
       </div>
 
       <div class="glass-card reveal">
         <span class="num">III.</span>
         <h3>A portfolio your <em>grandchildren</em> can name.</h3>
-        <p>
-          Stocks vanish in a tax statement. A 75-unit community in a $22B economic
-          corridor has an address. A cornerstone. A name your family will speak
-          aloud at Thanksgiving in 2056.
-        </p>
+        <ul class="dream-bullets">
+          <li>A real address — not a ticker.</li>
+          <li>75 doors anchored in a $22B economic corridor.</li>
+          <li>A name your family still speaks aloud in 2056.</li>
+        </ul>
       </div>
 
       <div class="glass-card reveal">
         <span class="num">IV.</span>
         <h3>The <em>quiet leverage</em> of depreciation.</h3>
-        <p>
-          High-W2 earners spend their careers writing checks to the IRS. Our
-          partners write off paper losses on appreciating assets — turning a
-          $35,000+ first-year deduction into compounding fuel that never touches
-          ordinary income again.
-        </p>
+        <ul class="dream-bullets">
+          <li>$35K+ in modeled first-year tax shelter.</li>
+          <li>Paper losses on appreciating assets.</li>
+          <li>Compounding fuel that never touches ordinary income.</li>
+        </ul>
       </div>
 
       <div class="glass-card reveal">
         <span class="num">V.</span>
         <h3>Decisions that <em>don't decay</em>.</h3>
-        <p>
-          A trade lives for a quarter. An equity allocation in a Sun Belt apartment
-          community lives for a generation. The choice you make this month will
-          still be paying you in 2031 — long after every market headline is
-          forgotten.
-        </p>
+        <ul class="dream-bullets">
+          <li>A trade lives a quarter; an apartment lives a generation.</li>
+          <li>This month's choice still pays in 2031.</li>
+          <li>Long-duration ownership in a Sun Belt corridor.</li>
+        </ul>
       </div>
 
       <div class="glass-card reveal">
         <span class="num">VI.</span>
         <h3>A seat at the table — <em>quietly</em>.</h3>
-        <p>
-          The deals that build generational wealth are never advertised on television.
-          They circulate between operators, surgeons, founders, and family offices.
-          FaithBridge is your invitation to that room.
-        </p>
+        <ul class="dream-bullets">
+          <li>Generational deals are never advertised.</li>
+          <li>They circulate between operators, physicians, founders, family offices.</li>
+          <li>FaithBridge is your invitation to that room.</li>
+        </ul>
       </div>
     </div>
   </div>
