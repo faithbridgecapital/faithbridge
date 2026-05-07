@@ -173,7 +173,7 @@ function welcomeEmailHtml({ firstName }) {
         </td></tr>
         <tr><td style="padding:0 44px 36px;">
           <div style="border-top:1px solid rgba(212,168,74,0.4);padding-top:22px;">
-            <div style="font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#B68A2E;font-size:20px;">— Dr. Ntiense Robin</div>
+            <div style="font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#B68A2E;font-size:20px;">— Dr. Ntiense Robin, DNAP, CRNA</div>
             <div style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(11,26,20,0.55);margin-top:6px;font-weight:500;">Founder &amp; Chief Executive Officer</div>
           </div>
         </td></tr>
@@ -201,7 +201,7 @@ function welcomeEmailText({ firstName }) {
     '',
     'Wealth that endures beyond your lifetime is not built on hype. It is built on the right partners, on the right terms, on the right day. I am glad you are here.',
     '',
-    '— Dr. Ntiense Robin',
+    '— Dr. Ntiense Robin, DNAP, CRNA',
     'Founder & Chief Executive Officer, FaithBridge Capital',
     '',
     '---',
