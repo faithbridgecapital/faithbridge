@@ -130,15 +130,35 @@
   nav.top {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 18px 56px;
+    padding: 12px 56px;
     display: flex; align-items: center; justify-content: space-between;
     background: rgba(244,239,230,0.65);
     backdrop-filter: blur(24px) saturate(160%);
     -webkit-backdrop-filter: blur(24px) saturate(160%);
-    border-bottom: 1px solid rgba(15,40,32,0.08);
+    border-bottom: none;
     transition: padding 0.3s ease;
   }
-  nav.top.scrolled { padding: 12px 56px; background: rgba(244,239,230,0.85); }
+  nav.top.scrolled { padding: 8px 56px; background: rgba(244,239,230,0.88); }
+  /* Decorative brass flourish riding the nav's bottom edge */
+  .nav-flourish {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: -22px;
+    height: 44px;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: visible;
+  }
+  .nav-flourish path {
+    fill: none;
+    stroke: var(--brass);
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    opacity: 0.55;
+    filter: drop-shadow(0 1px 6px rgba(212,168,74,0.25));
+  }
+  nav.top.scrolled .nav-flourish { bottom: -18px; opacity: 0.85; }
   .logo {
     display: flex; align-items: center; gap: 14px;
     text-decoration: none; color: var(--forest);
@@ -164,13 +184,14 @@
   .logo-mark span { font-family: var(--serif); font-size: 7px; letter-spacing: 0.18em; color: var(--brass); }
   .logo-text { font-family: var(--serif); font-size: 18px; letter-spacing: 0.32em; font-weight: 500; }
   .logo-img {
-    height: 84px;
+    height: 56px;
     width: auto;
     display: block;
     object-fit: contain;
     transition: transform 0.3s ease;
   }
   .logo:hover .logo-img { transform: scale(1.04); }
+  nav.top.scrolled .logo-img { height: 48px; }
   .footer-logo { height: 96px; }
   .nav-links { display: flex; gap: 36px; align-items: center; }
   .nav-links a {
@@ -1575,7 +1596,8 @@
     .hero-sticker { top: 86px; right: 18px; width: 88px; height: 88px; }
     .hero-sticker-ring text { font-size: 9px; letter-spacing: 0.22em; }
     .hero-sticker-core { width: 36px; height: 36px; font-size: 15px; }
-    .logo-img { height: 72px; }
+    .logo-img { height: 50px; }
+    nav.top.scrolled .logo-img { height: 42px; }
     .footer-logo { height: 84px; }
   }
 
@@ -1583,8 +1605,10 @@
   @media (max-width: 600px) {
     nav.top { padding: 12px 18px; }
     nav.top.scrolled { padding: 10px 18px; }
-    .logo-img { height: 64px; }
+    .logo-img { height: 44px; }
+    nav.top.scrolled .logo-img { height: 38px; }
     .footer-logo { height: 78px; }
+    .nav-flourish { bottom: -18px; height: 36px; }
     .nav-cta { padding: 8px 14px !important; font-size: 10px !important; }
     .hero, section { padding: 64px 18px; }
     .hero { padding-top: 92px; padding-bottom: 32px; gap: 24px; }
@@ -1693,6 +1717,9 @@
   <a class="logo" href="#top" aria-label="FaithBridge Capital — Home">
     <img class="logo-img" src="FaithBridge-Crest-Monogram-2.png" alt="FaithBridge Capital" />
   </a>
+  <svg class="nav-flourish" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M 0 22 C 90 14, 160 36, 280 22 C 440 4, 700 44, 980 24 S 1280 8, 1440 26" />
+  </svg>
   <div class="nav-links">
     <a href="#deal">Current Deal</a>
     <a href="#pillars">Why Us</a>
