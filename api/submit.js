@@ -1,5 +1,5 @@
 // FaithBridge Capital — form submission handler
-// Receives the "Join the Community" form payload and fans out two emails via Resend:
+// Receives the "Join the Investor Group" form payload and fans out two emails via Resend:
 //   1) A new-lead notification to the founder
 //   2) A branded welcome email to the prospective investor
 //
