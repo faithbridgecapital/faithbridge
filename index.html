@@ -538,8 +538,11 @@
   }
   .dream-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  @media (max-width: 1100px) {
+    .dream-grid { grid-template-columns: repeat(2, 1fr); }
   }
   .glass-card {
     background: rgba(255,255,255,0.5);
@@ -1705,16 +1708,6 @@
 
       <div class="glass-card reveal">
         <span class="num">III.</span>
-        <h3>A portfolio your <em>grandchildren</em> can name.</h3>
-        <ul class="dream-bullets">
-          <li>A real address — not a ticker.</li>
-          <li>75 doors anchored in a $22B economic corridor.</li>
-          <li>A name your family still speaks aloud in 2056.</li>
-        </ul>
-      </div>
-
-      <div class="glass-card reveal">
-        <span class="num">IV.</span>
         <h3>The <em>quiet leverage</em> of depreciation.</h3>
         <ul class="dream-bullets">
           <li>$35K+ in modeled first-year tax shelter.</li>
@@ -1724,21 +1717,11 @@
       </div>
 
       <div class="glass-card reveal">
-        <span class="num">V.</span>
-        <h3>Decisions that <em>don't decay</em>.</h3>
-        <ul class="dream-bullets">
-          <li>A trade lives a quarter; an apartment lives a generation.</li>
-          <li>This month's choice still pays in 2031.</li>
-          <li>Long-duration ownership in a Sun Belt corridor.</li>
-        </ul>
-      </div>
-
-      <div class="glass-card reveal">
-        <span class="num">VI.</span>
+        <span class="num">IV.</span>
         <h3>A seat at the table — <em>quietly</em>.</h3>
         <ul class="dream-bullets">
           <li>Generational deals are never advertised.</li>
-          <li>They circulate between operators, physicians, founders, family offices.</li>
+          <li>They circulate between operators, physicians, CRNAs, founders, family offices.</li>
           <li>FaithBridge is your invitation to that room.</li>
         </ul>
       </div>
