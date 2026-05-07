@@ -698,6 +698,94 @@
     background: var(--cream);
     position: relative;
   }
+  .deal-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 36px;
+  }
+  .deal-photo {
+    position: relative;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--forest-mid);
+    box-shadow: 0 30px 70px rgba(15,40,32,0.18);
+    isolation: isolate;
+  }
+  .deal-photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    border-radius: 10px;
+    border: 1px solid rgba(212,168,74,0.18);
+    pointer-events: none;
+    z-index: 3;
+  }
+  .deal-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(.22,.7,.3,1);
+  }
+  .deal-photo:hover img { transform: scale(1.04); }
+  .deal-photo-badge {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+    backdrop-filter: blur(14px) saturate(150%);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
+  }
+  .deal-photo-badge--current {
+    background: rgba(8,25,21,0.78);
+    color: var(--cream);
+    border: 1px solid rgba(244,239,230,0.18);
+  }
+  .deal-photo-badge--vision {
+    background: rgba(212,168,74,0.92);
+    color: var(--forest-deep);
+    border: 1px solid rgba(212,168,74,0.5);
+    box-shadow: 0 8px 22px rgba(212,168,74,0.35);
+  }
+  .deal-photo-badge--vision .spark {
+    font-size: 13px;
+    line-height: 1;
+    margin-right: 2px;
+  }
+  .deal-photo-tag {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: rgba(8,25,21,0.78);
+    color: var(--brass-soft);
+    border: 1px solid rgba(212,168,74,0.38);
+    backdrop-filter: blur(14px) saturate(150%);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
+    z-index: 2;
+  }
+  @media (max-width: 768px) {
+    .deal-comparison { grid-template-columns: 1fr; gap: 14px; margin-bottom: 28px; }
+    .deal-photo-badge { padding: 8px 14px; font-size: 10px; letter-spacing: 0.22em; }
+    .deal-photo-tag { padding: 6px 11px; font-size: 9px; letter-spacing: 0.22em; }
+  }
   .deal-hero {
     position: relative;
     border-radius: 4px;
@@ -1881,6 +1969,18 @@
           in the Southeast — partnered alongside an operator with 800+ doors
           under management. Allocations are filling.
         </p>
+    </div>
+
+    <div class="deal-comparison reveal">
+      <figure class="deal-photo">
+        <img src="harmony-grove-current.jpg" alt="Harmony Grove Apartments — current condition" loading="lazy" />
+        <figcaption class="deal-photo-badge deal-photo-badge--current">Current State</figcaption>
+      </figure>
+      <figure class="deal-photo">
+        <img src="harmony-grove-vision.webp" alt="Harmony Grove Apartments — post-renovation vision" loading="lazy" />
+        <span class="deal-photo-tag">Artist Rendering</span>
+        <figcaption class="deal-photo-badge deal-photo-badge--vision"><span class="spark">✦</span> Vision</figcaption>
+      </figure>
     </div>
 
     <div class="deal-hero reveal">
