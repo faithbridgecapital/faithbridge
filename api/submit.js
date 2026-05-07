@@ -87,32 +87,32 @@ export default async function handler(req, res) {
 function leadEmailHtml({ firstName, lastName, email, phone, status, message }) {
   return `<!DOCTYPE html>
 <html><head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#F4EFE6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0F2820;">
+<body style="margin:0;padding:0;background:#F4EFE6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0E2A2E;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F4EFE6;padding:40px 16px;">
     <tr><td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;background:#ffffff;border:1px solid rgba(15,40,32,0.08);">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;background:#ffffff;border:1px solid rgba(14,42,46,0.08);">
         <tr><td style="padding:36px 36px 18px;border-bottom:1px solid rgba(212,168,74,0.35);">
           <div style="font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:#B68A2E;font-weight:600;">FaithBridge Capital · New Lead</div>
         </td></tr>
         <tr><td style="padding:30px 36px 8px;">
-          <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:400;margin:0 0 8px;color:#0F2820;line-height:1.25;">A new partner just reached out.</h1>
+          <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:28px;font-weight:400;margin:0 0 8px;color:#0E2A2E;line-height:1.25;">A new partner just reached out.</h1>
           <p style="margin:0 0 22px;font-size:14px;color:rgba(11,26,20,0.65);line-height:1.6;">Hit Reply on this email and your message goes straight to ${esc(firstName)}.</p>
         </td></tr>
         <tr><td style="padding:0 36px 8px;">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;border-collapse:collapse;">
             ${row('Name', `${esc(firstName)} ${esc(lastName)}`)}
-            ${row('Email', `<a href="mailto:${esc(email)}" style="color:#0F2820;text-decoration:underline;">${esc(email)}</a>`)}
-            ${row('Phone', phone ? `<a href="tel:${esc(phone)}" style="color:#0F2820;text-decoration:underline;">${esc(phone)}</a>` : '—')}
+            ${row('Email', `<a href="mailto:${esc(email)}" style="color:#0E2A2E;text-decoration:underline;">${esc(email)}</a>`)}
+            ${row('Phone', phone ? `<a href="tel:${esc(phone)}" style="color:#0E2A2E;text-decoration:underline;">${esc(phone)}</a>` : '—')}
             ${row('Investor Status', esc(status) || '—', true)}
           </table>
         </td></tr>
         ${message ? `<tr><td style="padding:8px 36px 28px;">
-          <div style="background:#F4EFE6;border-left:2px solid #D4A84A;padding:18px 20px;font-size:14px;line-height:1.7;color:#0F2820;">
+          <div style="background:#F4EFE6;border-left:2px solid #D4A84A;padding:18px 20px;font-size:14px;line-height:1.7;color:#0E2A2E;">
             <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#B68A2E;font-weight:600;margin-bottom:8px;">Their Note</div>
             ${esc(message).replace(/\n/g,'<br>')}
           </div>
         </td></tr>` : '<tr><td style="padding:8px 36px 28px;"></td></tr>'}
-        <tr><td style="padding:24px 36px 32px;border-top:1px solid rgba(15,40,32,0.06);font-size:11px;line-height:1.6;color:rgba(11,26,20,0.5);">
+        <tr><td style="padding:24px 36px 32px;border-top:1px solid rgba(14,42,46,0.06);font-size:11px;line-height:1.6;color:rgba(11,26,20,0.5);">
           Submitted via faithbridge.capital · ${new Date().toLocaleString('en-US', { dateStyle: 'long', timeStyle: 'short' })}
         </td></tr>
       </table>
@@ -122,10 +122,10 @@ function leadEmailHtml({ firstName, lastName, email, phone, status, message }) {
 }
 
 function row(label, value, isLast = false) {
-  const border = isLast ? '' : 'border-bottom:1px solid rgba(15,40,32,0.07);';
+  const border = isLast ? '' : 'border-bottom:1px solid rgba(14,42,46,0.07);';
   return `<tr>
     <td style="padding:12px 0;${border}width:140px;color:rgba(11,26,20,0.55);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;">${label}</td>
-    <td style="padding:12px 0;${border}color:#0F2820;font-weight:500;">${value}</td>
+    <td style="padding:12px 0;${border}color:#0E2A2E;font-weight:500;">${value}</td>
   </tr>`;
 }
 
@@ -148,26 +148,26 @@ function leadEmailText({ firstName, lastName, email, phone, status, message }) {
 function welcomeEmailHtml({ firstName }) {
   return `<!DOCTYPE html>
 <html><head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#F4EFE6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0F2820;">
+<body style="margin:0;padding:0;background:#F4EFE6;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#0E2A2E;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F4EFE6;padding:48px 16px;">
     <tr><td align="center">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;background:#ffffff;border:1px solid rgba(15,40,32,0.08);">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;background:#ffffff;border:1px solid rgba(14,42,46,0.08);">
         <tr><td align="center" style="padding:40px 40px 28px;border-bottom:1px solid rgba(212,168,74,0.4);">
-          <div style="font-family:Georgia,'Times New Roman',serif;font-size:20px;letter-spacing:0.34em;color:#0F2820;font-weight:500;">FAITHBRIDGE</div>
+          <div style="font-family:Georgia,'Times New Roman',serif;font-size:20px;letter-spacing:0.34em;color:#0E2A2E;font-weight:500;">FAITHBRIDGE</div>
           <div style="font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#B68A2E;margin-top:10px;font-weight:500;">A Private Multifamily Partnership</div>
         </td></tr>
         <tr><td style="padding:40px 44px 8px;">
-          <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:300;margin:0 0 26px;color:#0F2820;line-height:1.2;">Welcome, ${esc(firstName)}.</h1>
-          <p style="font-size:16px;line-height:1.75;color:#0F2820;margin:0 0 18px;">
+          <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:34px;font-weight:300;margin:0 0 26px;color:#0E2A2E;line-height:1.2;">Welcome, ${esc(firstName)}.</h1>
+          <p style="font-size:16px;line-height:1.75;color:#0E2A2E;margin:0 0 18px;">
             Thank you for reaching out to FaithBridge Capital. Your details are in front of me, and I will be in touch personally within two business days — no automation, no list, no pressure.
           </p>
-          <p style="font-size:16px;line-height:1.75;color:#0F2820;margin:0 0 14px;">In the meantime, three things to expect:</p>
-          <ul style="font-size:15.5px;line-height:1.85;color:#0F2820;padding-left:20px;margin:0 0 26px;">
+          <p style="font-size:16px;line-height:1.75;color:#0E2A2E;margin:0 0 14px;">In the meantime, three things to expect:</p>
+          <ul style="font-size:15.5px;line-height:1.85;color:#0E2A2E;padding-left:20px;margin:0 0 26px;">
             <li>A short conversation to understand what you are building, and whether what we offer fits.</li>
             <li>If it does, full materials on our current Harmony Grove offering — underwriting, market thesis, sponsor track record.</li>
             <li>If it does not, an honest "not yet" and a referral if we can help you find one.</li>
           </ul>
-          <p style="font-size:16px;line-height:1.75;color:#0F2820;margin:0 0 36px;">
+          <p style="font-size:16px;line-height:1.75;color:#0E2A2E;margin:0 0 36px;">
             Wealth that endures beyond your lifetime is not built on hype. It is built on the right partners, on the right terms, on the right day. I am glad you are here.
           </p>
         </td></tr>
