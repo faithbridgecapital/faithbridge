@@ -3,4 +3,4 @@ Allow: /
 Disallow: /apps-script/
 Disallow: /emailjs-templates/
 
-Sitemap: https://faithbridge.capital/sitemap.xml
+Sitemap: https://faithbridgecap.com/sitemap.xml

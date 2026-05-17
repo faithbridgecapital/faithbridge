@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://faithbridge.capital/</loc>
+    <loc>https://faithbridgecap.com/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://faithbridge.capital/harmony-grove-vision.webp</image:loc>
+      <image:loc>https://faithbridgecap.com/harmony-grove-vision.webp</image:loc>
       <image:title>Harmony Grove Apartments — Marietta, Georgia</image:title>
       <image:caption>A 75-unit value-add multifamily community in the Atlanta MSA.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://faithbridge.capital/Robin.png</image:loc>
+      <image:loc>https://faithbridgecap.com/Robin.png</image:loc>
       <image:title>Dr. Ntiense Robin, DNAP, CRNA — Founder &amp; CEO of FaithBridge Capital</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://faithbridge.capital/ira.html</loc>
+    <loc>https://faithbridgecap.com/ira.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://faithbridge.capital/ira.jpg</image:loc>
+      <image:loc>https://faithbridgecap.com/ira.jpg</image:loc>
       <image:title>Self-Directed IRA and 401(k) Real Estate Investing</image:title>
     </image:image>
   </url>
