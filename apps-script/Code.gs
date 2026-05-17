@@ -15,7 +15,7 @@
  */
 
 // ===== CONFIGURATION =====
-const FOUNDER_EMAIL = 'ntiense@faithbridgecap.com';
+const FOUNDER_EMAIL = 'robin@faithbridgecap.com';
 const FOUNDER_NAME  = 'Dr. Ntiense Robin';
 const FROM_BRAND    = 'FaithBridge Capital';
 
