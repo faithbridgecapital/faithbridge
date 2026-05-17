@@ -1275,6 +1275,81 @@
   }
   .form-success em { color: var(--brass-soft); }
 
+  /* Calendly aside under the form */
+  .form-aside {
+    max-width: 660px;
+    margin: 28px auto 0;
+    text-align: center;
+    padding: 0 4px;
+  }
+  .form-aside-divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: rgba(244,239,230,0.5);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .form-aside-divider::before,
+  .form-aside-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212,168,74,0.35), transparent);
+  }
+  .form-aside-eyebrow {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--brass-soft);
+    margin-bottom: 12px;
+  }
+  .form-aside-text {
+    font-size: 15px;
+    color: rgba(244,239,230,0.78);
+    line-height: 1.7;
+    margin: 0 auto 22px;
+    max-width: 460px;
+  }
+  .form-aside-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .form-aside-cta::after {
+    content: '→';
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  /* CTA in the post-submission success state */
+  .form-success-cta {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(212,168,74,0.25);
+    text-align: center;
+  }
+  .form-success-cta p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(244,239,230,0.85);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .form-success-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .form-success-cta .btn::after {
+    content: '→';
+    font-size: 14px;
+    line-height: 1;
+  }
+
   /* PILLARS / Why FaithBridge */
   .pillars {
     background: linear-gradient(135deg, var(--forest-deep), var(--forest));
@@ -2433,7 +2508,7 @@
         </div>
         <div class="form-field">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Optional" />
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" />
         </div>
       </div>
 
@@ -2462,6 +2537,18 @@
         only: Reg D, Rule 501(a).
       </p>
     </form>
+
+    <div class="form-aside reveal">
+      <div class="form-aside-divider"><span>or</span></div>
+      <div class="form-aside-eyebrow">Skip the wait</div>
+      <p class="form-aside-text">
+        Already accredited and ready to talk? Book a 30-minute conversation
+        with Dr. Robin directly, no form required.
+      </p>
+      <a class="btn btn-light form-aside-cta" href="https://calendly.com/robin-faithbridgecap/30min" target="_blank" rel="noopener">
+        Book a 30-Minute Call
+      </a>
+    </div>
   </div>
 </section>
 
@@ -2618,10 +2705,15 @@
 
       f.outerHTML =
         '<div class="join-form" style="text-align:center;">' +
-        '<div class="form-success">' +
-        'Thank you, ' + escapeHtml(payload.firstName) + '. A welcome note is on its way to <em>' + escapeHtml(payload.email) + '</em>. ' +
-        'We will be in touch personally within two business days.' +
-        '</div></div>';
+          '<div class="form-success">' +
+            'Thank you, ' + escapeHtml(payload.firstName) + '. A welcome note is on its way to <em>' + escapeHtml(payload.email) + '</em>. ' +
+            'We will be in touch personally within two business days.' +
+          '</div>' +
+          '<div class="form-success-cta">' +
+            '<p>Want to move faster? Book a 30-minute call with Robin now.</p>' +
+            '<a class="btn btn-gold" href="https://calendly.com/robin-faithbridgecap/30min" target="_blank" rel="noopener">Book a 30-Minute Call</a>' +
+          '</div>' +
+        '</div>';
     } catch (err) {
       console.error(err);
       btn.disabled = false;
