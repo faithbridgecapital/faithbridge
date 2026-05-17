@@ -1,5 +1,5 @@
 /**
- * FaithBridge Capital — form handler (Google Apps Script)
+ * FaithBridge Capital, form handler (Google Apps Script)
  *
  * Receives a POST from the website's "Join the Investor Group" form,
  * sends a new-lead notification to the founder, sends a welcome email
@@ -8,7 +8,7 @@
  * Deploy: Deploy → New deployment → Web app
  *   Execute as: Me (your Google account)
  *   Who has access: Anyone
- * Copy the deployed URL — that goes into the site's submit handler.
+ * Copy the deployed URL, that goes into the site's submit handler.
  */
 
 // ===== CONFIGURATION =====
@@ -57,7 +57,7 @@ function doPost(e) {
     // 1) Notify the founder
     GmailApp.sendEmail(
       FOUNDER_EMAIL,
-      'New Lead — ' + fullName + ' · ' + (status || 'Status not provided'),
+      'New Lead, ' + fullName + ' · ' + (status || 'Status not provided'),
       leadEmailText({ firstName, lastName, email, phone, status, message }),
       {
         htmlBody: leadEmailHtml({ firstName, lastName, email, phone, status, message }),
@@ -69,7 +69,7 @@ function doPost(e) {
     // 2) Welcome the lead
     GmailApp.sendEmail(
       email,
-      'Welcome to FaithBridge — we will be in touch shortly',
+      'Welcome to FaithBridge, we will be in touch shortly',
       welcomeEmailText({ firstName }),
       {
         htmlBody: welcomeEmailHtml({ firstName }),
@@ -89,7 +89,7 @@ function doPost(e) {
         }
         sheet.appendRow([new Date(), firstName, lastName, email, phone, status, message]);
       } catch (sheetErr) {
-        // Don't fail the request if logging fails — the emails already sent.
+        // Don't fail the request if logging fails, the emails already sent.
         console.warn('Sheet logging failed:', sheetErr);
       }
     }
@@ -101,7 +101,7 @@ function doPost(e) {
   }
 }
 
-// Health check — visit the deployment URL in a browser to confirm it's live.
+// Health check, visit the deployment URL in a browser to confirm it's live.
 function doGet() {
   return json({ ok: true, message: 'FaithBridge form endpoint is live.' });
 }
@@ -147,8 +147,8 @@ function leadEmailHtml(p) {
               '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;border-collapse:collapse;">' +
                 row('Name', esc(p.firstName) + ' ' + esc(p.lastName)) +
                 row('Email', '<a href="mailto:' + esc(p.email) + '" style="color:#0E2A2E;">' + esc(p.email) + '</a>') +
-                row('Phone', p.phone ? '<a href="tel:' + esc(p.phone) + '" style="color:#0E2A2E;">' + esc(p.phone) + '</a>' : '—') +
-                row('Investor Status', esc(p.status) || '—', true) +
+                row('Phone', p.phone ? '<a href="tel:' + esc(p.phone) + '" style="color:#0E2A2E;">' + esc(p.phone) + '</a>' : '-') +
+                row('Investor Status', esc(p.status) || '-', true) +
               '</table>' +
             '</td></tr>' +
             noteBlock +
@@ -163,15 +163,15 @@ function leadEmailHtml(p) {
 
 function leadEmailText(p) {
   return [
-    'FaithBridge Capital — New Lead',
+    'FaithBridge Capital: New Lead',
     '',
     'Name:            ' + p.firstName + ' ' + p.lastName,
     'Email:           ' + p.email,
-    'Phone:           ' + (p.phone || '—'),
-    'Investor Status: ' + (p.status || '—'),
+    'Phone:           ' + (p.phone || '-'),
+    'Investor Status: ' + (p.status || '-'),
     '',
     'Note:',
-    p.message || '—',
+    p.message || '-',
     '',
     'Reply directly to this email to reach the lead.'
   ].join('\n');
@@ -190,12 +190,12 @@ function welcomeEmailHtml(p) {
             '<tr><td style="padding:40px 44px 8px;">' +
               '<h1 style="font-family:Georgia,serif;font-size:34px;font-weight:300;margin:0 0 26px;color:#0E2A2E;line-height:1.2;">Welcome, ' + esc(p.firstName) + '.</h1>' +
               '<p style="font-size:16px;line-height:1.75;color:#0E2A2E;margin:0 0 18px;">' +
-                'Thank you for reaching out to FaithBridge Capital. Your details are in front of me, and I will be in touch personally within two business days — no automation, no list, no pressure.' +
+                'Thank you for reaching out to FaithBridge Capital. Your details are in front of me, and I will be in touch personally within two business days, no automation, no list, no pressure.' +
               '</p>' +
               '<p style="font-size:16px;line-height:1.75;color:#0E2A2E;margin:0 0 14px;">In the meantime, three things to expect:</p>' +
               '<ul style="font-size:15.5px;line-height:1.85;color:#0E2A2E;padding-left:20px;margin:0 0 26px;">' +
                 '<li>A short conversation to understand what you are building, and whether what we offer fits.</li>' +
-                '<li>If it does, full materials on our current Harmony Grove offering — underwriting, market thesis, sponsor track record.</li>' +
+                '<li>If it does, full materials on our current Harmony Grove offering, underwriting, market thesis, sponsor track record.</li>' +
                 '<li>If it does not, an honest "not yet" and a referral if we can help you find one.</li>' +
               '</ul>' +
               '<p style="font-size:16px;line-height:1.75;color:#0E2A2E;margin:0 0 36px;">' +
@@ -204,7 +204,7 @@ function welcomeEmailHtml(p) {
             '</td></tr>' +
             '<tr><td style="padding:0 44px 36px;">' +
               '<div style="border-top:1px solid rgba(212,168,74,0.4);padding-top:22px;">' +
-                '<div style="font-family:Georgia,serif;font-style:italic;color:#B68A2E;font-size:20px;">— Dr. Ntiense Robin, DNAP, CRNA</div>' +
+                '<div style="font-family:Georgia,serif;font-style:italic;color:#B68A2E;font-size:20px;">- Dr. Ntiense Robin, DNAP, CRNA</div>' +
                 '<div style="font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(11,26,20,0.55);margin-top:6px;font-weight:500;">Founder &amp; Chief Executive Officer</div>' +
               '</div>' +
             '</td></tr>' +
@@ -223,16 +223,16 @@ function welcomeEmailText(p) {
   return [
     'Welcome, ' + p.firstName + '.',
     '',
-    'Thank you for reaching out to FaithBridge Capital. Your details are in front of me, and I will be in touch personally within two business days — no automation, no list, no pressure.',
+    'Thank you for reaching out to FaithBridge Capital. Your details are in front of me, and I will be in touch personally within two business days, no automation, no list, no pressure.',
     '',
     'In the meantime, three things to expect:',
     ' - A short conversation to understand what you are building, and whether what we offer fits.',
-    ' - If it does, full materials on our current Harmony Grove offering — underwriting, market thesis, sponsor track record.',
+    ' - If it does, full materials on our current Harmony Grove offering, underwriting, market thesis, sponsor track record.',
     ' - If it does not, an honest "not yet" and a referral if we can help you find one.',
     '',
     'Wealth that endures beyond your lifetime is not built on hype. It is built on the right partners, on the right terms, on the right day. I am glad you are here.',
     '',
-    '— Dr. Ntiense Robin, DNAP, CRNA',
+    '- Dr. Ntiense Robin, DNAP, CRNA',
     'Founder & Chief Executive Officer, FaithBridge Capital'
   ].join('\n');
 }
