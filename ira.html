@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FaithBridge Capital — Wealth That Endures Beyond Your Lifetime</title>
+<title>Invest Your IRA or 401(k) in Real Estate — FaithBridge Capital</title>
+<meta name="description" content="Over $1.2 trillion sits idle in self-directed IRAs earning near nothing. FaithBridge Capital helps families redirect retirement funds into asset-backed multifamily real estate — without a taxable event." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -1733,33 +1734,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-
-  /* Inline citations */
-  sup.cite {
-    font-size: 0.7em;
-    line-height: 0;
-    margin-left: 3px;
-    letter-spacing: 0.04em;
-    vertical-align: super;
-  }
-  sup.cite a {
-    color: var(--brass-soft);
-    text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease;
-    border-bottom: 1px solid rgba(226,192,121,0.45);
-    padding-bottom: 1px;
-  }
-  sup.cite a:hover {
-    color: var(--brass);
-    border-bottom-color: var(--brass);
-  }
-  /* On light backgrounds, swap to darker brass */
-  .ira sup.cite a,
-  .cream sup.cite a,
-  body > section:not(.founder):not(.dream):not(.pillars):not(.cta-final) sup.cite a {
-    color: var(--brass-deep);
-    border-bottom-color: rgba(212,168,74,0.35);
-  }
 </style>
 </head>
 <body>
@@ -1772,513 +1746,185 @@
 
 <!-- NAV -->
 <nav class="top" id="topNav">
-  <a class="logo" href="#top" aria-label="FaithBridge Capital — Home">
+  <a class="logo" href="index.html" aria-label="FaithBridge Capital — Home">
     <img class="logo-img" src="FBlogo.png" alt="FaithBridge Capital" />
   </a>
   <div class="nav-links">
-    <a href="#deal">Current Deal</a>
-    <a href="#pillars">Why Us</a>
-    <a href="#process">Process</a>
-    <a href="ira.html">IRA &amp; 401(k)</a>
-    <a href="#team">Team</a>
+    <a href="index.html#deal">Current Deal</a>
+    <a href="index.html#pillars">Why Us</a>
+    <a href="index.html#process">Process</a>
+    <a href="ira.html" aria-current="page">IRA &amp; 401(k)</a>
+    <a href="index.html#team">Team</a>
     <a href="#faq">FAQ</a>
-    <a class="btn nav-cta" href="#cta">Join the Investor Group</a>
+    <a class="btn nav-cta" href="index.html#cta">Join the Investor Group</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero" id="top">
+<header class="hero ira-hero" id="top">
   <video class="hero-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true">
     <source src="Banner.mp4" type="video/mp4" />
   </video>
   <div class="hero-bg-overlay"></div>
-
-  <a class="hero-sticker" href="#deal" aria-label="New Deal — Open for Investing">
-    <svg class="hero-sticker-ring" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <path id="stickerCircle" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"/>
-      </defs>
-      <text>
-        <textPath href="#stickerCircle" startOffset="0">NEW DEAL · OPEN FOR INVESTING · NEW DEAL · OPEN FOR INVESTING · </textPath>
-      </text>
-    </svg>
-    <div class="hero-sticker-core">→</div>
-  </a>
-
-  <div class="hero-left reveal">
-    <div class="eyebrow">A Private Multifamily Partnership</div>
-    <h1>Wealth that<br/>endures beyond<br/><em>your lifetime.</em></h1>
-    <p class="hero-lede">
-      A select circle of physicians, CRNAs, founders, and operators are quietly
-      assembling a portfolio of cash-flowing apartment communities — turning
-      surgical hours and Q4 bonuses into multigenerational equity.
+  <div class="hero-left" style="grid-column: 1 / -1; text-align: center; max-width: 920px; margin: 0 auto;">
+    <div class="eyebrow center" style="justify-content: center;">IRA &amp; 401(k) — Self-Directed Investing</div>
+    <h1 style="text-align: center;">Your retirement account deserves to <em>work as hard as you did</em>.</h1>
+    <p class="hero-lede" style="margin-left: auto; margin-right: auto; text-align: center;">
+      Most IRAs sit in stocks and bonds returning four to six percent — barely
+      keeping pace with inflation. FaithBridge Capital helps you redirect those
+      dollars into real, asset-backed multifamily real estate — without
+      withdrawing a single cent, without triggering a taxable event.
     </p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="#cta">Join the Investor Group</a>
-      <a class="btn btn-ghost" href="#deal">View Current Deal</a>
-    </div>
-  </div>
-
-  <div class="hero-right reveal">
-    <div class="quote-block">
-      <div class="quote-mark">"</div>
-      <div class="quote-text">
-        I built FaithBridge for the version of me who finished a 14-hour case
-        and wondered when his money would start working as hard as he did.
-      </div>
-      <div class="quote-attr">Dr. Ntiense Robin · Founder &amp; CEO</div>
-    </div>
-
-    <div class="hero-metrics">
-      <div class="metric-glass">
-        <div class="metric-num">17–20%</div>
-        <div class="metric-label">AAR*</div>
-      </div>
-      <div class="metric-glass">
-        <div class="metric-num">$35K</div>
-        <div class="metric-label">Up to · Tax Savings</div>
-      </div>
-      <div class="metric-glass">
-        <div class="metric-num">100%</div>
-        <div class="metric-label">Passive Income</div>
-      </div>
+    <div class="hero-cta" style="justify-content: center;">
+      <a class="btn btn-gold" href="#consult">Put My IRA to Work</a>
+      <a class="btn btn-light" href="#how">How It Works ↓</a>
     </div>
   </div>
 </header>
 
-<!-- DREAM SECTION -->
-<section class="dream" id="dream">
-  <video class="dream-video" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-hidden="true">
-    <source src="Cruise.mp4" type="video/mp4" />
-  </video>
+<!-- THE REALITY -->
+<section class="dream" style="padding-top: 110px; padding-bottom: 110px;">
   <div class="dream-overlay"></div>
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow center">The Dream Outcome</div>
-      <h2>Imagine a Tuesday<br/>where you <em>don't have to be there.</em></h2>
+      <div class="eyebrow center light">The Reality</div>
+      <h2>Your IRA is <em>working against you</em>.</h2>
       <p>
-        The cellphone doesn't go off. Your job doesn't dictate your morning.
-        Three hundred families across the country are paying rents in your name
-        — and you are at your daughter's recital. This is what real assets feel
-        like.
-      </p>
-    </div>
-
-    <div class="dream-grid">
-      <div class="glass-card reveal">
-        <span class="num">I.</span>
-        <h3>Sleep through your <em>best month</em>.</h3>
-        <ul class="dream-bullets">
-          <li>Rent collected while you rest.</li>
-          <li>Leases renewed without a phone call.</li>
-          <li>The only asset class that pays you for existing.</li>
-        </ul>
-      </div>
-
-      <div class="glass-card reveal">
-        <span class="num">II.</span>
-        <h3>Trade hours for <em>ownership</em>.</h3>
-        <ul class="dream-bullets">
-          <li>Earnings on the calendar, not the case load.</li>
-          <li>Each unit a small business paying you rent.</li>
-          <li>Compounding that never sleeps and never tires.</li>
-        </ul>
-      </div>
-
-      <div class="glass-card reveal">
-        <span class="num">III.</span>
-        <h3>The <em>quiet leverage</em> of depreciation.</h3>
-        <ul class="dream-bullets">
-          <li>$35K+ in modeled first-year tax shelter.</li>
-          <li>Paper losses on appreciating assets.</li>
-          <li>Compounding fuel that never touches ordinary income.</li>
-        </ul>
-      </div>
-
-      <div class="glass-card reveal">
-        <span class="num">IV.</span>
-        <h3>A seat at the table — <em>quietly</em>.</h3>
-        <ul class="dream-bullets">
-          <li>Generational deals are never advertised.</li>
-          <li>They circulate between operators, physicians, CRNAs, founders, family offices.</li>
-          <li>FaithBridge is your invitation to that room.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PILLARS / WHY FAITHBRIDGE -->
-<section class="pillars" id="pillars">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow center light">The FaithBridge Standard</div>
-      <h2>Why our partners <em>don't shop around</em>.</h2>
-      <p>
-        We are not the loudest sponsor in your inbox. We are the one who only
-        opens deals we are personally inside, on the same line of the cap stack as
-        you, with our own family's capital exposed to the same outcome.
+        Millions of Americans dutifully contribute to an IRA or 401(k) — then
+        hand control to fund managers who park it in volatile equities and
+        low-yield bonds. Meanwhile, inflation quietly erodes purchasing power
+        year after year. There is a better way.
       </p>
     </div>
 
     <div class="pillar-grid">
       <div class="pillar reveal">
-        <div class="pillar-icon">i</div>
-        <h3>Aligned to the <em>last dollar</em>.</h3>
-        <p>
-          Our founder co-invests in every offering, on the same terms as our LPs.
-          When the deal performs, we eat well together. When it doesn't, we suffer
-          first. There is no "house" you are playing against.
-        </p>
+        <div class="pillar-icon">↓</div>
+        <h3>Traditional IRA</h3>
+        <p style="font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color: var(--brass-soft); margin-bottom: 12px;">Average Return</p>
+        <div style="font-family: var(--serif); font-size: 56px; color: var(--cream); font-weight: 300; line-height: 1;">4 – 6%</div>
+        <p style="margin-top: 18px;">Stocks, bonds, and mutual funds — exposed to public market volatility, with returns barely outpacing inflation in most years.</p>
+      </div>
+
+      <div class="pillar reveal" style="border-color: rgba(212,168,74,0.4); background: rgba(244,239,230,0.07);">
+        <div class="pillar-icon">▲</div>
+        <h3>FaithBridge <em>Multifamily IRA</em></h3>
+        <p style="font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color: var(--brass-soft); margin-bottom: 12px;">Target Return</p>
+        <div style="font-family: var(--serif); font-size: 56px; color: var(--brass); font-weight: 300; line-height: 1;">8 – 12%</div>
+        <p style="margin-top: 18px;">Real, income-producing multifamily real estate — held inside a tax-advantaged retirement structure, backed by physical assets.</p>
       </div>
 
       <div class="pillar reveal">
-        <div class="pillar-icon">ii</div>
-        <h3>Our <em>Due</em> diligence.</h3>
-        <p>
-          We don't accept "probably underwriting." Every deal is stress-tested
-          against rate hikes, vacancy spikes, and exit cap expansion before it
-          ever reaches your inbox.
-        </p>
+        <div class="pillar-icon">$</div>
+        <h3>Idle Capital</h3>
+        <p style="font-size:13px; letter-spacing:0.18em; text-transform:uppercase; color: var(--brass-soft); margin-bottom: 12px;">In Self-Directed IRAs</p>
+        <div style="font-family: var(--serif); font-size: 56px; color: var(--cream); font-weight: 300; line-height: 1;">$1.2T</div>
+        <p style="margin-top: 18px;">Over a trillion dollars sits in self-directed retirement accounts earning near nothing — capital that could be working in real assets.</p>
       </div>
-
-      <div class="pillar reveal">
-        <div class="pillar-icon">iii</div>
-        <h3>Operators, <em>not influencers</em>.</h3>
-        <p>
-          We partner only with sponsors who own and operate buildings, not ones who
-          collect referral fees. Our current partner controls over 1,000 doors —
-          and treats every one like their own roof.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process" id="process">
+<!-- WHY REAL ESTATE -->
+<section class="process" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow center">Why Real Estate</div>
+      <h2>Six reasons real estate <em>outperforms</em> your current IRA.</h2>
+      <p>
+        It is not a clever theory. It is how durable family wealth has been built
+        for generations — and how it is still built today.
+      </p>
+    </div>
+
+    <div class="process-grid" style="grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <div class="step-card reveal">
+        <span class="step-num">↑</span>
+        <div class="step-label">Higher Returns</div>
+        <h4 style="font-size: 22px; margin-bottom: 14px; color: var(--forest-deep); font-weight: 400;">Compound faster in real assets.</h4>
+        <p>Target 8–12% annualized vs. 4–6% in traditional IRAs. Income-producing real estate compounds retirement dollars at a materially higher rate.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <span class="step-num">◆</span>
+        <div class="step-label">Asset-Backed Security</div>
+        <h4 style="font-size: 22px; margin-bottom: 14px; color: var(--forest-deep); font-weight: 400;">Backed by physical property.</h4>
+        <p>Unlike paper assets, your retirement is collateralized by tangible real estate — buildings, doors, and land that hold intrinsic value through cycles.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <span class="step-num">§</span>
+        <div class="step-label">Tax-Advantaged Growth</div>
+        <h4 style="font-size: 22px; margin-bottom: 14px; color: var(--forest-deep); font-weight: 400;">Tax-deferred or tax-free.</h4>
+        <p>Traditional IRA growth is tax-deferred. Roth growth is tax-free. Real estate held inside either keeps more of every dollar working for you.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <span class="step-num">◇</span>
+        <div class="step-label">Diversification</div>
+        <h4 style="font-size: 22px; margin-bottom: 14px; color: var(--forest-deep); font-weight: 400;">Beyond stocks and bonds.</h4>
+        <p>Multifamily real estate has historically maintained value during equity drawdowns — moving the portfolio away from pure market correlation.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <span class="step-num">★</span>
+        <div class="step-label">Inflation Protection</div>
+        <h4 style="font-size: 22px; margin-bottom: 14px; color: var(--forest-deep); font-weight: 400;">Rents rise with the cost of living.</h4>
+        <p>Real estate historically outpaces inflation. Rents reset upward, preserving — and growing — purchasing power for retirement.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <span class="step-num">✓</span>
+        <div class="step-label">Truly Passive</div>
+        <h4 style="font-size: 22px; margin-bottom: 14px; color: var(--forest-deep); font-weight: 400;">No landlord duties.</h4>
+        <p>No tenant calls, no maintenance headaches. A professional operating team handles every aspect — you receive distributions and statements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="ira" id="how" style="padding-top: 110px; padding-bottom: 110px;">
   <div class="container">
     <div class="section-head reveal">
       <div class="eyebrow center">The Process</div>
-      <h2>Get started in <em>3 easy steps</em>.</h2>
+      <h2>Idle IRA to <em>income-producing</em> real estate.</h2>
       <p>
-        Step into the world of multifamily real estate alongside a quiet circle of
-        physicians, founders, and operators. We handle the diligence — you receive
-        the income.
+        It is simpler than most investors expect. No withdrawal penalties, no
+        tax hit — just four steps to put retirement funds to work.
       </p>
     </div>
 
     <div class="process-grid">
       <div class="step-card reveal">
-        <span class="step-num">1</span>
-        <div class="step-label">Free Consultation:</div>
-        <p>
-          Schedule a 30-minute call with our team. We'll learn what you're building,
-          confirm accredited status, and surface the right allocation for your goals
-          — no pitch, no pressure.
-        </p>
+        <span class="step-num">01</span>
+        <div class="step-label">Discovery Call</div>
+        <p>Speak with our investor relations team to review your IRA balance, account type, and goals. Free and confidential — no commitment.</p>
       </div>
+
       <div class="step-card reveal">
-        <span class="step-num">2</span>
-        <div class="step-label">Invest:</div>
-        <p>
-          Activate your investor portal, review the deal package on your own time,
-          then sign subscription documents securely online. Capital wires to escrow
-          and your seat on the cap table is locked.
-        </p>
+        <span class="step-num">02</span>
+        <div class="step-label">Open a Self-Directed IRA</div>
+        <p>We walk you through opening a Self-Directed IRA with a qualified custodian — the account structure that unlocks real estate investing.</p>
       </div>
+
       <div class="step-card reveal">
-        <span class="step-num">3</span>
-        <div class="step-label">Earn Passive Income:</div>
-        <p>
-          Distributions begin post-stabilization and arrive automatically. Quarterly
-          performance updates, annual K-1s, and a quiet compounding engine. <em>Welcome
-          to ownership.</em>
-        </p>
+        <span class="step-num">03</span>
+        <div class="step-label">Fund Your SDIRA</div>
+        <p>Roll over or transfer existing IRA or old 401(k) funds. No taxes, no penalties. The custodian handles the transfer directly.</p>
       </div>
     </div>
 
-    <div class="process-cta reveal">
-      <a class="btn btn-primary" href="#cta">Book Your Free Consultation</a>
-    </div>
-  </div>
-</section>
-
-<!-- IRA SECTION -->
-<section class="ira" id="ira">
-  <div class="container">
-    <div class="ira-grid">
-      <div class="ira-text reveal">
-        <div class="ira-eyebrow">Did you know?</div>
-        <h2>You can <em>invest</em> with your old <em>401(k) or IRA</em>.</h2>
-        <p>
-          Self-directed retirement accounts let you redirect dormant 401(k) and
-          IRA balances into institutional-quality multifamily real estate —
-          unlocking passive income, real-asset appreciation, and the tax
-          efficiency of a Reg D structure without triggering a taxable event on
-          the rollover. Our team walks you through custodian selection and
-          paperwork end to end.
-        </p>
-        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-          <a class="btn btn-primary" href="ira.html">Explore IRA Investing</a>
-          <a class="btn btn-ghost" href="#cta">Talk to Our Team</a>
-        </div>
-      </div>
-
-      <div class="ira-visual reveal">
-        <div class="ira-frame">
-          <img class="ira-image" src="ira.jpg" alt="A community of investors building generational wealth together" />
-          <div class="ira-image-veil"></div>
-          <div class="ira-feature">
-            <div class="ira-feature-icon">◆</div>
-            <div class="ira-feature-text">
-              <strong>Tax-Advantaged Investing</strong>
-              <span>Roll over your old 401(k) or IRA with no taxable event.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DEAL: HARMONY GROVE -->
-<section class="deal" id="deal">
-  <div class="container">
-    <div class="section-head reveal">
-        <div class="eyebrow center">Currently In Allocation</div>
-        <h2>The Deal <em>Everyone</em> Is Talking About</h2>
-        <p>
-          A 75-unit value-add community in one of the strongest economic corridors
-          in the Southeast — partnered alongside an operator with 800+ doors
-          under management. Allocations are filling.
-        </p>
-    </div>
-
-    <div class="deal-comparison reveal">
-      <figure class="deal-photo">
-        <img src="harmony-grove-vision.webp" alt="Harmony Grove Apartments — current condition" loading="lazy" />
-        <figcaption class="deal-photo-badge deal-photo-badge--current">Current State</figcaption>
-      </figure>
-      <figure class="deal-photo">
-        <img src="harmony-grove-current.jpg" alt="Harmony Grove Apartments — post-renovation vision" loading="lazy" />
-        <span class="deal-photo-tag">Artist Rendering</span>
-        <figcaption class="deal-photo-badge deal-photo-badge--vision"><span class="spark">✦</span> Vision</figcaption>
-      </figure>
-    </div>
-
-    <div class="deal-hero reveal">
-      <div class="deal-hero-grid">
-        <div>
-          <div class="deal-status"><span class="dot"></span>Open · Limited Allocation</div>
-          <h2>Harmony Grove<br/><em>Apartments</em></h2>
-          <div class="deal-location">
-            <span>◆</span>
-            <span>Marietta, Georgia · Cobb County · Atlanta MSA</span>
-          </div>
-          <div class="deal-tagline">
-            "It's time to wake up your sleeping capital." A 75-door,
-            value-add multifamily opportunity in a $22B economic corridor.
-          </div>
-        </div>
-
-        <div class="deal-stat-grid">
-          <div class="deal-stat">
-            <div class="v"><em>20%</em></div>
-            <div class="l">Avg. Annual Return</div>
-          </div>
-          <div class="deal-stat">
-            <div class="v">75</div>
-            <div class="l">Doors Under Plan</div>
-          </div>
-          <div class="deal-stat">
-            <div class="v">97%</div>
-            <div class="l">Current Occupancy</div>
-          </div>
-          <div class="deal-stat">
-            <div class="v">5 yr</div>
-            <div class="l">Hold Horizon</div>
-          </div>
-          <div class="deal-stat">
-            <div class="v"><em>$35K+</em></div>
-            <div class="l">Year-1 Tax Savings</div>
-          </div>
-          <div class="deal-stat">
-            <div class="v">$281K</div>
-            <div class="l">Stabilized Upside</div>
-          </div>
-        </div>
+    <div class="process-grid" style="margin-top: 28px; grid-template-columns: 1fr;">
+      <div class="step-card reveal" style="max-width: 540px; margin: 0 auto;">
+        <span class="step-num">04</span>
+        <div class="step-label">Invest &amp; Earn</div>
+        <p>Your SDIRA invests in FaithBridge multifamily offerings. Distributions flow back into the account, and retirement grows — backed by real property.</p>
       </div>
     </div>
 
-    <!-- Deal details -->
-    <div class="deal-detail-grid">
-      <div class="deal-detail-card reveal">
-        <div class="eyebrow">The Asset</div>
-        <h4>75 doors. 100% value-add. <span style="color:var(--brass-deep);">Already cash-flowing.</span></h4>
-        <p>
-          A studio, one- and two-bedroom community in original, un-renovated
-          condition — meaning every door is a forced-appreciation lever the day we
-          close. In-place rents average <strong>$1,092</strong> against a comp set
-          of <strong>$1,435</strong>. The gap is the thesis.
-        </p>
-        <ul>
-          <li><strong>Asset class</strong> — Garden-style multifamily, residential</li>
-          <li><strong>Mix</strong> — Studio · 1BR · 2BR</li>
-          <li><strong>Renovation</strong> — Granite, stainless, shaker cabinets, subway tile</li>
-          <li><strong>Sourced from</strong> — CBRE Offering Memorandum (Jan 2026)</li>
-        </ul>
-      </div>
-
-      <div class="deal-detail-card reveal">
-        <div class="eyebrow">The Submarket</div>
-        <h4>A <span style="color:var(--brass-deep);">$22 billion</span> economic engine.</h4>
-        <p>
-          Marietta sits inside one of Atlanta's most resilient corridors. Two
-          anchors alone — <strong>The Battery Atlanta</strong> ($18B annual impact)
-          and <strong>Lockheed Martin</strong> — generate a combined economic
-          footprint of $22.5B per year. Workforce housing in their orbit does not
-          sit empty.
-        </p>
-        <ul>
-          <li><strong>MSA</strong> — Atlanta, Georgia (Cobb County)</li>
-          <li><strong>Demand drivers</strong> — Defense, sports, healthcare, logistics</li>
-          <li><strong>Resilience</strong> — Top-decile rent retention through prior cycle</li>
-        </ul>
-      </div>
-
-      <div class="deal-detail-card reveal">
-        <div class="eyebrow">The Business Plan</div>
-        <h4>Renovate. Re-rent. <span style="color:var(--brass-deep);">Refinance or sell.</span></h4>
-        <p>
-          We acquire at a basis below replacement cost, execute interior renovations
-          across all 75 units, push rents toward the comp set, and stabilize at
-          a materially higher NOI. From there: refinance to return capital, or sell
-          into the institutional bid that always emerges in Atlanta.
-        </p>
-        <ul>
-          <li><strong>Interior upgrades</strong> — Speckled granite, stainless package</li>
-          <li><strong>Cabinetry</strong> — White shaker, modern subway tile backsplash</li>
-          <li><strong>Hold</strong> — 5-year horizon · Distributions begin post-stabilization</li>
-        </ul>
-      </div>
-
-      <div class="deal-detail-card reveal">
-        <div class="eyebrow">The Operating Team</div>
-        <h4>Mila Penn Chazak — <span style="color:var(--brass-deep);">800+ doors</span> under management.</h4>
-        <p>
-          We are partnered with an operating group built by physicians, educators,
-          and capital markets veterans — people who treat tenants the way they
-          treat patients.
-        </p>
-        <ul>
-          <li><strong>Dr. Kirk A. Campbell</strong> — Founding Principal · Assoc. Prof. Orthopedic Surgery, NYU Langone</li>
-          <li><strong>Rosanmi M. Campbell</strong> — Founding Principal · Full-time operator</li>
-          <li><strong>J. Claude Mouaffi</strong> — Founding Principal · Capital formation &amp; alternative structures</li>
-          <li><strong>Co-Partners</strong> — FaithBridge Capital</li>
-        </ul>
-      </div>
-
-      <div class="deal-detail-card reveal">
-        <div class="eyebrow">The Tax Story</div>
-        <h4>The IRS code was <span style="color:var(--brass-deep);">written for owners</span>.</h4>
-        <p>
-          Direct multifamily ownership unlocks accelerated depreciation that can
-          shelter a meaningful portion of your passive distributions in year one —
-          a deduction that does not exist anywhere on your brokerage statement.
-        </p>
-        <ul>
-          <li><strong>Year-1 paper deduction</strong> — At least $35,000 modeled</li>
-          <li><strong>Income type</strong> — Passive, K-1 reported</li>
-          <li><strong>Cost segregation</strong> — Engineered study at acquisition</li>
-        </ul>
-      </div>
-
-      <div class="deal-detail-card reveal">
-        <div class="eyebrow">The Investor</div>
-        <h4>For accredited partners <span style="color:var(--brass-deep);">building a quiet empire</span>.</h4>
-        <p>
-          This offering is structured for accredited investors under Reg D Rule
-          501(a). Allocations close when they close. We do not advertise to fill,
-          we accept until the slate is full.
-        </p>
-        <ul>
-          <li><strong>Eligibility</strong> — Accredited only · Reg D 501(a)</li>
-          <li><strong>Distributions</strong> — Pro-rata to LP interests</li>
-          <li><strong>Liquidity</strong> — Illiquid · 5-year hold</li>
-          <li><strong>Reporting</strong> — Quarterly performance · Annual K-1</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="deal-cta reveal">
-      <a class="btn btn-primary" href="#cta">Reserve Your Allocation</a>
-    </div>
-  </div>
-</section>
-
-<!-- VOICE / QUIET CONVICTION -->
-<section class="voice">
-  <div class="container">
-    <div class="voice-block reveal">
-      <div class="eyebrow center">A Note From The Founder</div>
-      <p class="voice-quote">
-        The wealthy don't earn differently than you. They <em>own differently</em>.
-        FaithBridge exists to close that gap — quietly, durably, and in a form
-        your grandchildren will still be living off long after every quarterly
-        report is forgotten.
-      </p>
-      <div class="voice-divider"></div>
-      <div class="voice-attr">Dr. Ntiense Robin · Founder &amp; CEO</div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section class="founder" id="team">
-  <div class="container">
-    <div class="founder-grid">
-      <div class="founder-portrait reveal">
-        <img src="Robin.png" alt="Dr. Ntiense Robin, DNAP, CRNA — Founder & CEO of FaithBridge Capital" />
-        <div class="founder-frame-tr"></div>
-      </div>
-      <div class="founder-text reveal">
-        <div class="eyebrow light">The Team</div>
-        <h2>A clinician's discipline.<br/>An <em>investor's conviction</em>.</h2>
-        <p>
-          Dr. Ntiense Robin is a practicing Certified Registered Nurse Anesthetist
-          (CRNA) and entrepreneur holding a Doctor of Nurse Anesthesia Practice
-          (DNAP) from Georgetown University. Based in the Washington,
-          D.C./Maryland area, he is highly active in clinical care, real estate
-          investing, and community advocacy.<sup class="cite"><a href="https://safemedtrans.com/about-us/" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://www.linkedin.com/in/ntiense-robin-7818a252" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://www.linkedin.com/in/ntiense-robin-408437271" target="_blank" rel="noopener noreferrer">3</a></sup>
-        </p>
-        <p>
-          A Nigerian-American raised in the United States, Dr. Robin built
-          FaithBridge for the colleagues he knew best — physicians, surgeons, and
-          high-earning professionals whose income is generous but whose time is
-          finite. People who don't want a stock tip. They want a quiet, durable
-          income stream they can hand to their children without explanation.
-        </p>
-        <p>
-          He is also an author and men's-group president whose Christian faith is
-          the quiet engine behind his work. His devotional <em>77 Days of Favor
-          Declarations</em> draws from a personal journey of intercessory prayer
-          and faith-based success — a worldview he treats not as a marketing line
-          but as a posture: <em>wealth is a stewardship, and a stewardship is
-          protected first and grown second</em>.
-        </p>
-        <p>
-          A long-time real estate investor, Dr. Robin holds every offering to a
-          single standard: it must be one he would put his own family's capital
-          into, on the same terms, on the same day. The deals you see on this site
-          are the deals he is in.
-        </p>
-        <div class="founder-name-block">
-          <div class="founder-name">Dr. Ntiense Robin, DNAP, CRNA</div>
-          <div class="founder-title">Founder &amp; Chief Executive Officer</div>
-        </div>
-      </div>
+    <div class="process-cta">
+      <a class="btn btn-primary" href="#consult">Start the Conversation</a>
     </div>
   </div>
 </section>
@@ -2287,183 +1933,130 @@
 <section class="faq" id="faq">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow center">Quiet Answers</div>
-      <h2>The questions partners <em>actually ask</em>.</h2>
+      <div class="eyebrow center">Common Questions</div>
+      <h2>IRA investing — <em>answered</em>.</h2>
       <p>
-        Drawn from a decade of conversations with physicians, founders, and operators
-        considering their first private real estate allocation.
+        Plain-English answers to the questions most investors ask before
+        directing retirement funds into real estate.
       </p>
     </div>
 
     <div class="faq-wrap">
-
-      <div class="reveal">
-        <div class="faq-cat-label">Getting Started</div>
-
-        <details class="faq-item">
-          <summary>What is the minimum allocation?<span class="faq-icon"></span></summary>
+      <div>
+        <details class="faq-item reveal">
+          <summary>Do I need to withdraw money from my IRA to invest?<span class="faq-icon"></span></summary>
           <div class="faq-answer"><div class="faq-answer-inner">
-            For our current Harmony Grove offering, allocations begin at <strong>$50,000</strong>, with most partners committing in the $50K–$250K range. Future offerings may carry different floors; the minimum for each deal is stated explicitly in the Private Placement Memorandum you receive after our introductory call.
+            <strong>No.</strong> You never withdraw your IRA funds. Your
+            Self-Directed IRA custodian transfers funds directly into the
+            investment, keeping your tax-advantaged status fully intact — with
+            <em>no penalties and no taxable events</em>.
           </div></div>
         </details>
 
-        <details class="faq-item">
-          <summary>Who is eligible to invest with FaithBridge?<span class="faq-icon"></span></summary>
+        <details class="faq-item reveal">
+          <summary>What is a Self-Directed IRA (SDIRA)?<span class="faq-icon"></span></summary>
           <div class="faq-answer"><div class="faq-answer-inner">
-            Our partnerships are extended only to <strong>accredited investors</strong> as defined under Reg D, Rule 501(a) — generally individuals with earned income above $200,000 (or $300,000 jointly with a spouse) for the prior two consecutive years, or net worth above $1 million excluding primary residence. We verify accredited status before any subscription documents are signed.
+            A Self-Directed IRA is a retirement account that allows you to invest
+            in alternative assets — like real estate, private equity, and
+            multifamily syndications — beyond traditional stocks, bonds, and
+            mutual funds. Same tax treatment, a vastly wider universe of
+            investment options.
           </div></div>
         </details>
 
-        <details class="faq-item">
-          <summary>Can I invest using my IRA, Solo 401(k), or other retirement capital?<span class="faq-icon"></span></summary>
+        <details class="faq-item reveal">
+          <summary>Can I use a Roth IRA as well as a Traditional IRA?<span class="faq-icon"></span></summary>
           <div class="faq-answer"><div class="faq-answer-inner">
-            Yes. A meaningful share of our partners deploy retirement capital through a <strong>self-directed IRA</strong> or <strong>Solo 401(k)</strong>. We can introduce you to custodians our partners have used, but you'll evaluate, select, and contract with the custodian directly. Tax treatment varies — consult your CPA on UBIT considerations for leveraged real estate.
-          </div></div>
-        </details>
-      </div>
-
-      <div class="reveal">
-        <div class="faq-cat-label">Trust &amp; Track Record</div>
-
-        <details class="faq-item">
-          <summary>Why should I trust FaithBridge with my capital?<span class="faq-icon"></span></summary>
-          <div class="faq-answer"><div class="faq-answer-inner">
-            Because we sit on the same line of the cap stack you do. Our founder, <strong>Dr. Ntiense Robin</strong>, co-invests personally in every offering on identical terms — when the deal performs, we eat well together; when it doesn't, we suffer first. We also partner only with operating sponsors who have institutional track records we can verify, and we share underwriting, comp studies, and operator references freely on request.
+            <strong>Yes.</strong> Both Traditional and Roth IRAs can be
+            self-directed into real estate. With a Roth SDIRA, your gains and
+            distributions can grow <em>tax-free</em> — one of the most powerful
+            wealth-building vehicles available to long-horizon investors.
           </div></div>
         </details>
 
-        <details class="faq-item">
-          <summary>What is your performance record?<span class="faq-icon"></span></summary>
+        <details class="faq-item reveal">
+          <summary>Can I roll over my old 401(k) from a previous employer?<span class="faq-icon"></span></summary>
           <div class="faq-answer"><div class="faq-answer-inner">
-            As a private partnership, we share results to current and prospective partners under NDA — not publicly. After your introductory call we provide deal-by-deal historical performance, audited operator track records (our Harmony Grove partner manages <strong>800+ doors</strong>), and references from existing investors who will speak to their experience directly. <em>Past performance is not indicative of future results, and not every deal performs as modeled.</em>
-          </div></div>
-        </details>
-      </div>
-
-      <div class="reveal">
-        <div class="faq-cat-label">Your Investment</div>
-
-        <details class="faq-item">
-          <summary>How is my capital protected?<span class="faq-icon"></span></summary>
-          <div class="faq-answer"><div class="faq-answer-inner">
-            Through three structural layers. <strong>(1) Conservative underwriting</strong> — every deal is stress-tested for cap-rate expansion, vacancy spikes, and rate movement before it reaches your inbox. <strong>(2) Real, productive collateral</strong> — the asset itself is the security and continues to generate rent even in soft markets, unlike a paper security. <strong>(3) Sponsor co-investment</strong> — the GP's personal capital is exposed to the same outcome as yours. Multifamily equity is illiquid and risk of principal loss is real, but its historical drawdowns are materially smaller than equities.
+            <strong>Absolutely.</strong> An old 401(k) from a former employer is
+            one of the most common funding sources. You can roll it into a
+            Self-Directed IRA without triggering taxes or penalties, then deploy
+            those dollars into our multifamily portfolio.
           </div></div>
         </details>
 
-        <details class="faq-item">
-          <summary>How are projected returns actually generated?<span class="faq-icon"></span></summary>
+        <details class="faq-item reveal">
+          <summary>What is the minimum investment amount?<span class="faq-icon"></span></summary>
           <div class="faq-answer"><div class="faq-answer-inner">
-            Three channels, blended over the hold. <strong>Cash flow</strong> from in-place rents during operations. <strong>Forced appreciation</strong> as renovations push rents from current ($1,092 average at Harmony Grove) toward the comp set ($1,435), lifting NOI and asset value. And a <strong>capital event at year five</strong> — either a refinance returning a portion of capital tax-free, or a sale into the institutional bid that consistently emerges in markets like Atlanta. Modeled returns assume all three; actual outcomes depend on execution and market conditions.
+            Minimums vary by offering. Book a free discovery call and our team
+            will walk you through current opportunities and the minimum
+            thresholds that align with your IRA balance and goals.
           </div></div>
         </details>
 
-        <details class="faq-item">
-          <summary>How long is the typical hold period?<span class="faq-icon"></span></summary>
+        <details class="faq-item reveal">
+          <summary>Who manages the properties?<span class="faq-icon"></span></summary>
           <div class="faq-answer"><div class="faq-answer-inner">
-            Five years is our standard horizon for value-add deals, with a possible one-year extension if exit timing favors a delayed sale. This is a long-duration commitment — your capital is locked for the life of the deal. <em>Do not commit allocations you may need before the hold ends.</em>
+            FaithBridge Capital and our operating partners handle all asset and
+            property management — acquisition, renovations, leasing, and the
+            day-to-day. You receive statements and distributions; we handle the
+            work. Truly <em>passive</em> by design.
           </div></div>
         </details>
 
-        <details class="faq-item">
-          <summary>What kind of reporting will I receive?<span class="faq-icon"></span></summary>
+        <details class="faq-item reveal">
+          <summary>Is this offering available to non-accredited investors?<span class="faq-icon"></span></summary>
           <div class="faq-answer"><div class="faq-answer-inner">
-            <strong>Quarterly</strong> performance updates with property-level financials and renovation progress. <strong>Annual K-1s</strong> for tax filing. An <strong>investor portal</strong> with documents, distribution history, and statements. And direct access to the operating sponsor on quarterly partner calls — you can ask the people running the building, not a customer service rep.
+            Most FaithBridge offerings are made under Regulation D, Rule 506(c)
+            to <strong>accredited investors only</strong>. We will confirm
+            eligibility during your discovery call and walk you through any
+            verification steps required by the offering.
           </div></div>
         </details>
       </div>
-
-      <div class="reveal">
-        <div class="faq-cat-label">Fit &amp; Next Steps</div>
-
-        <details class="faq-item">
-          <summary>I'm a busy professional — how much time will this take?<span class="faq-icon"></span></summary>
-          <div class="faq-answer"><div class="faq-answer-inner">
-            About <strong>30 minutes</strong> for the introductory call, an hour to read the Memorandum at your own pace, and 20 minutes to sign subscription documents digitally. After that, the active commitment is roughly 30 minutes per quarter to read the update. The work belongs to the operator. Your time stays where it earns the most.
-          </div></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>How do I know if FaithBridge is a fit for me?<span class="faq-icon"></span></summary>
-          <div class="faq-answer"><div class="faq-answer-inner">
-            You're likely a <strong>strong fit</strong> if you're an accredited investor with capital you don't need for at least five years, you value durable cash flow and tax efficiency more than headline-grabbing returns, and you'd rather partner with operators than chase yield. You're likely <strong>not the right fit</strong> if you require liquidity, want quarterly trading flexibility, expect guaranteed returns, or are early in your wealth-building before an emergency reserve is in place.
-          </div></div>
-        </details>
-
-        <details class="faq-item">
-          <summary>What are the next steps?<span class="faq-icon"></span></summary>
-          <div class="faq-answer"><div class="faq-answer-inner">
-            Send a note to <strong>invest@faithbridge.capital</strong>, or use the buttons below to schedule a 30-minute introductory call. We'll confirm accredited status, send the current deal Memorandum, and answer your specific questions one-on-one over Zoom. There is no pitch, no obligation, and no high-pressure follow-up. Allocations close when they close.
-          </div></div>
-        </details>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="cta-final" id="cta">
+<!-- CTA / CONSULT -->
+<section class="cta-final" id="consult">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow center light">A Final Word</div>
-      <h2>The room <em>fills quietly</em>.<br/>Hold your seat.</h2>
+      <div class="eyebrow center light">Get Started</div>
+      <h2>Ready to put your <em>retirement</em> to work?</h2>
       <p>
-        Allocations into Harmony Grove and the deals that follow are extended only
-        to a small circle of accredited partners. Leave your details below and we'll
-        reach out personally — no list, no automation, no pressure.
+        Schedule a free, no-obligation discovery call with our investor
+        relations team. We will walk you through your IRA options, answer every
+        question, and show you exactly how to get started — at no cost. No
+        withdrawal required, no penalties, no taxes.
       </p>
+
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 360px)); gap: 16px 28px; justify-content: center; margin: 36px auto 44px; max-width: 760px; text-align: left;">
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="color: var(--brass); font-family: var(--serif); font-size: 22px; line-height: 1;">◆</span>
+          <span style="font-size: 14px; color: rgba(244,239,230,0.82); line-height: 1.6;">No withdrawal required — funds never leave your retirement structure</span>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="color: var(--brass); font-family: var(--serif); font-size: 22px; line-height: 1;">◆</span>
+          <span style="font-size: 14px; color: rgba(244,239,230,0.82); line-height: 1.6;">No penalties or taxes — properly structured rollovers are 100% penalty-free</span>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="color: var(--brass); font-family: var(--serif); font-size: 22px; line-height: 1;">◆</span>
+          <span style="font-size: 14px; color: rgba(244,239,230,0.82); line-height: 1.6;">Backed by real assets — every dollar secured by physical multifamily property</span>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: flex-start;">
+          <span style="color: var(--brass); font-family: var(--serif); font-size: 22px; line-height: 1;">◆</span>
+          <span style="font-size: 14px; color: rgba(244,239,230,0.82); line-height: 1.6;">Guided end-to-end — custodian selection, paperwork, and funding</span>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-gold" href="index.html#cta">Book a Free IRA Consultation</a>
+        <a class="btn btn-light" href="index.html">Back to Main Site</a>
+      </div>
     </div>
-
-    <form id="joinForm" class="join-form reveal" onsubmit="return submitJoin(event)" autocomplete="on">
-      <div class="form-row">
-        <div class="form-field">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
-        </div>
-        <div class="form-field">
-          <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required autocomplete="email" />
-        </div>
-        <div class="form-field">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Optional" />
-        </div>
-      </div>
-
-      <div class="form-field">
-        <label for="status">Investor Status</label>
-        <select id="status" name="status" required>
-          <option value="">Select one…</option>
-          <option>Accredited Investor</option>
-          <option>Working toward accreditation</option>
-          <option>Investing through a Self-Directed IRA / 401(k)</option>
-          <option>Not yet accredited — just learning</option>
-          <option>Prefer not to say</option>
-        </select>
-      </div>
-
-      <div class="form-field">
-        <label for="message">A brief note <span style="text-transform:none; letter-spacing:0; color:rgba(244,239,230,0.4); font-size:11px;">(optional)</span></label>
-        <textarea id="message" name="message" rows="3" placeholder="What you're hoping to build…"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-gold">Join the Investor Group</button>
-
-      <p class="form-fineprint">
-        By submitting, you consent to be contacted by FaithBridge Capital regarding
-        future offerings. We do not share your information. Accredited investors
-        only — Reg D, Rule 501(a).
-      </p>
-    </form>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer>
@@ -2482,18 +2075,18 @@
       <div>
         <h5>Partnership</h5>
         <ul>
-          <li><a href="#deal">Current Deal</a></li>
-          <li><a href="#pillars">Why FaithBridge</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="index.html#deal">Current Deal</a></li>
+          <li><a href="index.html#pillars">Why FaithBridge</a></li>
+          <li><a href="index.html#team">Team</a></li>
         </ul>
       </div>
 
       <div>
         <h5>Investor</h5>
         <ul>
-          <li><a href="#cta">Join the Investor Group</a></li>
+          <li><a href="index.html#cta">Join the Investor Group</a></li>
           <li><a href="ira.html">IRA &amp; 401(k) Rollover</a></li>
-          <li><a href="#process">The Process</a></li>
+          <li><a href="index.html#process">The Process</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
