@@ -2596,12 +2596,20 @@
 
     const escapeHtml = (s) => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+    // EmailJS free tier doesn't support {{#if}} conditionals, so we pre-compute
+    // display-ready fallback values and pass them alongside the raw fields.
+    const templateParams = Object.assign({}, payload, {
+      phoneDisplay:   payload.phone   || '-',
+      statusDisplay:  payload.status  || '-',
+      messageDisplay: payload.message || '(No additional message provided.)'
+    });
+
     try {
       await loadEmailJS();
       // 1) Lead notification to the founder
-      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_LEAD_TEMPLATE, payload);
+      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_LEAD_TEMPLATE, templateParams);
       // 2) Welcome to the lead
-      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_WELCOME_TEMPLATE, payload);
+      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_WELCOME_TEMPLATE, templateParams);
 
       f.outerHTML =
         '<div class="join-form" style="text-align:center;">' +
