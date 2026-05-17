@@ -1418,6 +1418,199 @@
     line-height: 1.7;
   }
 
+  /* STRATEGIC PARTNERS */
+  .partners {
+    background: linear-gradient(135deg, var(--forest-deep), var(--forest) 50%, var(--forest-mid));
+    color: var(--cream);
+    overflow: hidden;
+    position: relative;
+  }
+  .partners::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 75% 25%, rgba(212,168,74,0.16), transparent 50%),
+      radial-gradient(circle at 25% 80%, rgba(212,168,74,0.06), transparent 55%);
+    pointer-events: none;
+  }
+  .partners .container { position: relative; z-index: 2; }
+  .partners .section-head h2 { color: var(--cream); }
+  .partners .section-head h2 em { color: var(--brass-soft); }
+  .partners .section-head p { color: rgba(244,239,230,0.72); }
+  .partners .section-head .eyebrow { color: var(--brass-soft); }
+  .partners .section-head .eyebrow::before,
+  .partners .section-head .eyebrow.center::after { background: var(--brass); }
+
+  .partner-card {
+    background: rgba(244,239,230,0.04);
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    border: 1px solid rgba(244,239,230,0.12);
+    border-radius: 8px;
+    padding: 56px 52px;
+    position: relative;
+    overflow: hidden;
+    max-width: 1120px;
+    margin: 0 auto;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.06) inset,
+      0 30px 80px rgba(7,26,29,0.4);
+  }
+  .partner-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212,168,74,0.55), transparent);
+  }
+  .partner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .partner-brand {
+    padding-right: 40px;
+    border-right: 1px solid rgba(212,168,74,0.2);
+  }
+  .partner-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 600;
+    margin-bottom: 22px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .partner-eyebrow::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--brass);
+  }
+  .partner-logo-wrap {
+    background: var(--forest-deep);
+    border: 1px solid rgba(212,168,74,0.2);
+    border-radius: 4px;
+    padding: 26px 30px;
+    margin-bottom: 28px;
+    display: inline-block;
+  }
+  .partner-logo {
+    height: 56px;
+    width: auto;
+    display: block;
+  }
+  .partner-name {
+    font-family: var(--serif);
+    font-size: 26px;
+    color: var(--cream);
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .partner-tagline {
+    font-size: 13px;
+    color: rgba(244,239,230,0.6);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 340px;
+  }
+  .partner-aum {
+    padding-top: 24px;
+    border-top: 1px solid rgba(244,239,230,0.1);
+  }
+  .partner-aum-num {
+    font-family: var(--serif);
+    font-size: 54px;
+    color: var(--brass);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+  .partner-aum-num em {
+    font-size: 32px;
+    color: var(--brass-soft);
+    font-style: normal;
+    margin-left: 4px;
+  }
+  .partner-aum-label {
+    font-size: 10.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(244,239,230,0.55);
+    font-weight: 500;
+  }
+
+  .partner-people {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .partner-person {
+    position: relative;
+    text-align: left;
+  }
+  .partner-person-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background: var(--forest-mid);
+  }
+  .partner-person-photo::after {
+    content: '';
+    position: absolute; inset: 0;
+    border: 1px solid rgba(212,168,74,0.22);
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .partner-person-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: contrast(1.03);
+    transition: transform 0.6s cubic-bezier(.22,.7,.3,1);
+  }
+  .partner-person-photo:hover img { transform: scale(1.04); }
+  .partner-person-name {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--brass-soft);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .partner-person-title {
+    font-size: 10.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: rgba(244,239,230,0.55);
+    font-weight: 500;
+    margin-top: 6px;
+  }
+
+  @media (max-width: 1024px) {
+    .partner-card { padding: 44px 32px; }
+    .partner-grid { grid-template-columns: 1fr; gap: 40px; }
+    .partner-brand {
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 1px solid rgba(212,168,74,0.2);
+      padding-bottom: 36px;
+    }
+  }
+  @media (max-width: 600px) {
+    .partner-card { padding: 32px 22px; border-radius: 6px; }
+    .partner-logo-wrap { padding: 20px 22px; }
+    .partner-logo { height: 44px; }
+    .partner-name { font-size: 22px; }
+    .partner-aum-num { font-size: 42px; }
+    .partner-aum-num em { font-size: 24px; }
+    .partner-people { grid-template-columns: 1fr 1fr; gap: 14px; }
+    .partner-person-name { font-size: 16px; }
+    .partner-person-title { font-size: 9.5px; letter-spacing: 0.2em; }
+  }
+
   /* TESTIMONIAL / VOICE */
   .voice {
     background: var(--cream);
@@ -2352,6 +2545,62 @@
         <div class="founder-name-block">
           <div class="founder-name">Dr. Ntiense Robin, DNAP, CRNA</div>
           <div class="founder-title">Founder &amp; Chief Executive Officer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGIC PARTNERS -->
+<section class="partners" id="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow center light">Strategic Partners</div>
+      <h2>Built alongside operators who run <em>real assets</em>.</h2>
+      <p>
+        FaithBridge places capital alongside vetted operating partners who have
+        spent careers building, financing, and managing multifamily portfolios
+        at institutional scale.
+      </p>
+    </div>
+
+    <div class="partner-card reveal">
+      <div class="partner-grid">
+        <div class="partner-brand">
+          <div class="partner-eyebrow">Lead Operating Partner</div>
+          <div class="partner-logo-wrap">
+            <img class="partner-logo" src="XSITE-Gold.png" alt="XSITE Capital Investment" />
+          </div>
+          <div class="partner-name">XSITE Capital Investment</div>
+          <p class="partner-tagline">
+            A multifamily investment firm acquiring, repositioning, and operating
+            apartment communities across high-growth corridors.
+          </p>
+          <div class="partner-aum">
+            <div class="partner-aum-num">$274<em>M</em></div>
+            <div class="partner-aum-label">Assets Under Management</div>
+          </div>
+        </div>
+
+        <div class="partner-people">
+          <figure class="partner-person">
+            <div class="partner-person-photo">
+              <img src="tenny.jpg" alt="Tenny Tolofari, Chief Growth Officer at XSITE Capital" loading="lazy" />
+            </div>
+            <figcaption>
+              <div class="partner-person-name">Tenny Tolofari</div>
+              <div class="partner-person-title">Chief Growth Officer</div>
+            </figcaption>
+          </figure>
+          <figure class="partner-person">
+            <div class="partner-person-photo">
+              <img src="Leslie.jpg" alt="Leslie Awasom, Chief Operating Officer at XSITE Capital" loading="lazy" />
+            </div>
+            <figcaption>
+              <div class="partner-person-name">Leslie Awasom</div>
+              <div class="partner-person-title">Chief Operating Officer</div>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
