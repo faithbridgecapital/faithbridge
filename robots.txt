@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /apps-script/
+Disallow: /emailjs-templates/
+
+Sitemap: https://faithbridge.capital/sitemap.xml
