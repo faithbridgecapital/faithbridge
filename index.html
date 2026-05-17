@@ -2544,8 +2544,12 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Form submission: POSTs to serverless function, which fans out to Resend.
-  // Sends a welcome email to the lead and a new-lead notification to the founder.
+  // Form submission: POSTs to a Google Apps Script web app, which sends a
+  // notification email to the founder and a welcome email to the lead via Gmail.
+  // Content-Type is text/plain to avoid the CORS preflight that Apps Script
+  // does not respond to; the body is still JSON.
+  const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycby7D8Y24T_Glo6l6MHnFOryQPknHLd97vZelYcONFAjwwU_ztDVandiZhEkELiMp3UX4A/exec';
+
   async function submitJoin(e) {
     e.preventDefault();
     const f = e.target;
@@ -2567,12 +2571,15 @@
     const escapeHtml = (s) => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
     try {
-      const res = await fetch('/api/submit', {
+      const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload),
+        redirect: 'follow'
       });
-      if (!res.ok) throw new Error((await res.text()) || 'Submit failed');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json().catch(() => ({}));
+      if (data && data.ok === false) throw new Error(data.error || 'Submit failed');
 
       f.outerHTML =
         '<div class="join-form" style="text-align:center;">' +
