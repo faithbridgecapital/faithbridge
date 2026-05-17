@@ -2635,10 +2635,14 @@
   //   1) Lead notification to Robin
   //   2) Welcome to the lead
   // Free tier: 200 emails/month (= 100 form submissions).
-  const EMAILJS_PUBLIC_KEY      = '0v0vmotL-aiwXOpui';
-  const EMAILJS_SERVICE_ID      = 'service_qsaik6t';
-  const EMAILJS_LEAD_TEMPLATE   = 'template_2m3rfet';
+  const EMAILJS_PUBLIC_KEY       = '0v0vmotL-aiwXOpui';
+  const EMAILJS_SERVICE_ID       = 'service_qsaik6t';
+  const EMAILJS_LEAD_TEMPLATE    = 'template_2m3rfet';
   const EMAILJS_WELCOME_TEMPLATE = 'template_9u70y3p';
+
+  // Google Apps Script endpoint used for fire-and-forget sheet logging
+  // (GET only, since Workspace blocks anonymous POST to user-deployed scripts).
+  const SHEET_LOG_URL = 'https://script.google.com/macros/s/AKfycby7D8Y24T_Glo6l6MHnFOryQPknHLd97vZelYcONFAjwwU_ztDVandiZhEkELiMp3UX4A/exec';
 
   // Lazy-load EmailJS SDK and initialise once.
   function loadEmailJS() {
@@ -2702,6 +2706,22 @@
       await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_LEAD_TEMPLATE, templateParams);
       // 2) Welcome to the lead
       await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_WELCOME_TEMPLATE, templateParams);
+      // 3) Fire-and-forget: log the submission to the Google Sheet via Apps Script GET.
+      //    no-cors keeps the response opaque (we don't read it) and avoids CORS noise.
+      try {
+        const sheetParams = new URLSearchParams({
+          firstName: payload.firstName,
+          lastName:  payload.lastName,
+          email:     payload.email,
+          phone:     payload.phone,
+          status:    payload.status,
+          message:   payload.message
+        }).toString();
+        fetch(SHEET_LOG_URL + '?' + sheetParams, { method: 'GET', mode: 'no-cors' })
+          .catch(err => console.warn('Sheet log non-blocking:', err));
+      } catch (sheetErr) {
+        console.warn('Sheet log skipped:', sheetErr);
+      }
 
       f.outerHTML =
         '<div class="join-form" style="text-align:center;">' +
