@@ -2598,7 +2598,12 @@
 
     // EmailJS free tier doesn't support {{#if}} conditionals, so we pre-compute
     // display-ready fallback values and pass them alongside the raw fields.
+    // Also alias the lead's email under EmailJS's default `to_email` name so
+    // either template variable resolves correctly.
     const templateParams = Object.assign({}, payload, {
+      to_email:       payload.email,
+      to_name:        (payload.firstName + ' ' + payload.lastName).trim(),
+      reply_to:       payload.email,
       phoneDisplay:   payload.phone   || '-',
       statusDisplay:  payload.status  || '-',
       messageDisplay: payload.message || '(No additional message provided.)'
